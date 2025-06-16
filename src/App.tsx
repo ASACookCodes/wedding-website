@@ -1,4 +1,3 @@
-import "./App.css";
 import { Calendar, MapPin, Heart } from "lucide-react";
 import { Link } from "react-router-dom";
 const App = () => {
@@ -42,11 +41,11 @@ const App = () => {
             {/* Main content */}
             <div className="text-center z-10 px-6 max-w-4xl fade-in-up">
               <div className="mb-8">
-                <Heart className="w-12 h-12 text-pink-400 mx-auto mb-4 animate-pulse" />
-                <h1 className="text-6xl lg:text-8xl font-serif font-bold text-wedding-heading mb-4">
+                <Heart className="w-12 h-12 text-pink-400 mx-auto mb-9 animate-pulse" />
+                <h1 className="text-6xl lg:text-9xl mb-4 font-centralwell">
                   Alice & Andrew
                 </h1>
-                <div className="w-32 h-1 bg-gradient-to-r from-pink-300 to-blue-300 mx-auto mb-6"></div>
+                <div className="w-32 h-1 bg-gradient-to-r from-pink-300 to-green-300 mx-auto mb-6"></div>
                 <p className="text-xl lg:text-2xl text-wedding-text font-light">
                   Together with our families, we invite you to celebrate our wedding
                 </p>
@@ -72,8 +71,9 @@ const App = () => {
                 </div>
               </div>
 
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  <Link to="/venue">View Venue Details</Link>
+              <div className="flex flex-row sm:flex-row gap-4 justify-center mb-4">
+                  <Link to="/venue">The Venue</Link>
+                  <Link to="/day">The Day</Link>
               </div>
             </div>
           </div>

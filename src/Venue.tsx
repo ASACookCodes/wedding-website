@@ -14,14 +14,14 @@ const Venue = () => {
                   className="w-full h-full object-contain"
                 />
               </div>
-              <h1 className="text-5xl font-serif font-bold text-wedding-heading mb-4">The Venue</h1>
+              <h1 className="text-7xl text-wedding-heading mb-4 font-centralwell">The Venue</h1>
               <div className="w-24 h-1 bg-gradient-to-r from-orange-300 to-pink-300"></div>
             </div>
 
             <div className="grid md:grid-cols-2 gap-8 mb-12">
               <Card>
                 <CardHeader>
-                  <CardTitle className="flex items-center gap-2 text-wedding-heading">
+                  <CardTitle className="flex items-center gap-2 text-wedding-heading font-californian">
                     <MapPin className="w-5 h-5" />
                     Location Details
                   </CardTitle>
@@ -35,7 +35,7 @@ const Venue = () => {
 
               <Card>
                 <CardHeader>
-                  <CardTitle className="flex items-center gap-2 text-wedding-heading">
+                  <CardTitle className="flex items-center gap-2 text-wedding-heading font-californian">
                     <Clock className="w-5 h-5" />
                     Ceremony & Reception
                   </CardTitle>
@@ -61,7 +61,7 @@ const Venue = () => {
 
             <Card className="mb-8">
               <CardHeader>
-                <CardTitle className="flex items-center gap-2 text-wedding-heading">
+                <CardTitle className="flex items-center gap-2 text-wedding-heading font-californian">
                   <Users className="w-5 h-5" />
                   Venue Amenities
                 </CardTitle>

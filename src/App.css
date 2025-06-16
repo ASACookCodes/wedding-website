@@ -13,6 +13,29 @@ body {
     background-color: var(--wedding-bg);
     color: var(--wedding-text);
 }
+
+
+}
+
+@font-face {
+  font-family: Californian;
+  font-style: normal;
+  font-weight: 200 700;
+  font-display: swap;
+  src: url("/fonts/californian-fb.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: Centralwell;
+  font-style: normal;
+  font-weight: 200 700;
+  font-display: swap;
+  src: url("/fonts/Centralwell.ttf") format("truetype");
+}
+
+@theme {
+  --font-californian: 'Californian', serif;
+  --font-centralwell: 'Centralwell', serif;
 }
 
 @keyframes float {
