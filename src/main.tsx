@@ -4,11 +4,11 @@ import App from './App.tsx'
 import "./App.css";
 import Venue from './Venue.tsx'
 import Day from './Day.tsx'
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { HashRouter, Routes, Route } from 'react-router-dom'
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
-    <BrowserRouter>
+    <HashRouter>
         <Routes>
           <Route path="/" element={<App />} />
           <Route path="/venue" element={<Venue />} />
@@ -19,6 +19,6 @@ createRoot(document.getElementById('root')!).render(
           <Route path="/contact" element={<Contact />} />
           <Route path="*" element={<NotFound />} /> */}
         </Routes>
-    </BrowserRouter>
+    </HashRouter>
   </StrictMode>,
 )
