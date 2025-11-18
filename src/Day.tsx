@@ -1,5 +1,5 @@
 import { Clock, Camera, Music, Utensils } from "lucide-react";
-import { Card, CardContent, CardHeader, CardTitle } from "./components/card";
+import { Card, CardContent} from "./components/card";
 
 const Day = () => {
   const timeline = [
