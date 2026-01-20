@@ -1,4 +1,5 @@
 import { MapPin, Clock, Users } from "lucide-react";
+import OrangeFlowers from "./assets/Flower_02_Orange.png";
 import { Card, CardContent, CardHeader, CardTitle } from "./components/card";
 
 const Venue = () => {
@@ -9,7 +10,7 @@ const Venue = () => {
             <div className="relative mb-12">
               <div className="absolute -top-4 -right-4 w-30 h-30 opacity-80 float-animation">
                 <img 
-                  src="/src/assets/Flower_02_Orange.png" 
+                  src={OrangeFlowers} 
                   alt="Orange flowers"
                   className="w-full h-full object-contain"
                 />

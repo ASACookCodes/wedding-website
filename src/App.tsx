@@ -1,4 +1,8 @@
 import { Calendar, MapPin, Heart } from "lucide-react";
+import PinkFlower from "./assets/Flower 08_Pink.png"
+import MixedWaterColourFlowers from "./assets/Flower 12_Blue.png"
+import PinkLilyFlowers from "./assets/Flower 13_Pink.png"
+import BlueWatercolourFlowers from "./assets/Flower 18_Pink & Blue.png"
 import { Link } from "react-router-dom";
 const App = () => {
   return (
@@ -11,28 +15,28 @@ const App = () => {
             {/* Decorative flower images */}
             <div className="absolute top-10 left-10 w-48 h-48 opacity-60 float-animation">
               <img 
-                src="/src/assets/Flower 08_Pink.png" 
+                src={PinkFlower} 
                 alt="Pink watercolor flowers"
                 className="w-full h-full object-contain"
               />
             </div>
             <div className="absolute top-20 right-16 w-60 h-60 opacity-50 float-animation" style={{animationDelay: '2s'}}>
               <img 
-              src="/src/assets/Flower 12_Blue.png" 
+              src={MixedWaterColourFlowers} 
               alt="Mixed watercolor flowers"
               className="w-full h-full object-contain"
               />
             </div>
             <div className="absolute bottom-20 left-20 w-54 h-54 opacity-40 float-animation" style={{animationDelay: '4s'}}>
               <img 
-              src="/src/assets/Flower 13_Pink.png" 
+              src={PinkLilyFlowers} 
               alt="Pink lily flowers"
               className="w-full h-full object-contain"
               />
             </div>
             <div className="absolute bottom-20 right-20 w-52 h-52 opacity-50 float-animation" style={{animationDelay: '1s'}}>
               <img 
-              src="/src/assets/Flower 18_Pink & Blue.png"
+              src={BlueWatercolourFlowers}
               alt="Blue watercolor flowers"
               className="w-full h-full object-contain"
               />
@@ -72,8 +76,8 @@ const App = () => {
               </div>
 
               <div className="flex flex-row sm:flex-row gap-4 justify-center mb-4">
-                  <Link to="/venue">The Venue</Link>
-                  <Link to="/day">The Day</Link>
+                  <Link to="/venue">Venue</Link>
+                  <Link to="/day">Schedule</Link>
               </div>
             </div>
           </div>

@@ -1,18 +1,26 @@
 import { Clock, Camera, Music, Utensils } from "lucide-react";
+import BlueLavender from "./assets/Flower 12_Blue.png";
+import BlueFlowers from "./assets/Flower 03_Blue.png";
 import { Card, CardContent} from "./components/card";
 
 const Day = () => {
   const timeline = [
     {
-      time: "2:00 PM",
-      event: "Bridal Party Preparations",
-      description: "Getting ready with hair, makeup, and photos",
+      time: "12:30 PM",
+      event: "Arrival Time",
+      description: "Please arrive by this time to ensure you are seated before the ceremony begins. The ceremony will be held in the woods a short walk from the venue. Accessible transport will be available if needed.",
       icon: Camera
     },
     {
-      time: "4:00 PM",
-      event: "Wedding Ceremony",
-      description: "Join us in the Rose Garden for our vows",
+      time: "1:00 PM",
+      event: "Ceremony Begins",
+      description: "We welcome you to join us in the woods for the celebration of our special day",
+      icon: Camera
+    },
+    {
+      time: "3:00 PM",
+      event: "Wedding Breakfast",
+      description: "A three course meal will be served in the barn following the ceremony.",
       icon: Clock
     },
     {
@@ -48,14 +56,23 @@ const Day = () => {
             <div className="relative mb-12">
               <div className="absolute -top-4 -right-4 w-35 h-35 opacity-40 float-animation">
                 <img 
-                  src="/src/assets/Flower 12_Blue.png" 
+                  src={BlueLavender} 
                   alt="Blue lavender"
                   className="w-full h-full object-contain"
                 />
               </div>
               <h1 className="text-7xl font-bold text-wedding-heading mb-4 font-centralwell">The Day</h1>
-              <div className="w-24 h-1 bg-gradient-to-r from-blue-300 to-purple-300"></div>
-              <p className="text-wedding-text mt-4 text-lg">Here's what to expect on our special day</p>
+              <p className="text-wedding-text mt-5 text-lg">Below are the timings and important information about what to expect on the day.</p>
+            </div>
+
+            <div className="relative mb-5">
+              <h3 className="text-xl font-semibold text-wedding-heading mb-2">Important Notes</h3>
+              <ul className="text-wedding-text space-y-1">
+                <li>• Please arrive before <b>12:30 PM</b> to allow enough time to make your way to the ceremony location.</li>
+                <li>• Outdoor woodland ceremony - please choose footwear suitable for natural terrain.</li>
+                <li>• Dancing and celebration until midnight</li>
+                <li>• <b>Card facilities are limited. Please bring enough cash for the evening.</b></li>
+              </ul>
             </div>
 
             <div className="space-y-6">
@@ -72,7 +89,7 @@ const Day = () => {
                         <div className="flex flex-col sm:flex-row sm:items-center gap-2 mb-2">
                           <span className="text-2xl font-semibold text-wedding-heading">{item.time}</span>
                           <span className="hidden sm:block text-wedding-text">•</span>
-                          <h3 className="text-xl font-semibold text-wedding-heading">{item.event}</h3>
+                          <h2 className="text-2xl font-semibold text-wedding-heading font-californian">{item.event}</h2>
                         </div>
                         <p className="text-wedding-text">{item.description}</p>
                       </div>
@@ -80,29 +97,6 @@ const Day = () => {
                   </CardContent>
                 </Card>
               ))}
-            </div>
-
-            <div className="mt-12 text-center">
-              <Card className="backdrop-blur-sm inline-block">
-                <CardContent className="p-6">
-                  <div className="relative">
-                    <div className="absolute -top-3 -left-3 w-20 h-20 opacity-40">
-                      <img 
-                        src="/lovable-uploads/f4c9e27d-c37d-4a18-8199-19ad1dcefba2.png" 
-                        alt="Blue flowers"
-                        className="w-full h-full object-contain"
-                      />
-                    </div>
-                    <h3 className="text-xl font-semibold text-wedding-heading mb-2">Important Notes</h3>
-                    <ul className="text-wedding-text space-y-1">
-                      <li>• Ceremony will be outdoors (weather permitting)</li>
-                      <li>• Cocktail hour includes open bar</li>
-                      <li>• Dinner will be a plated three-course meal</li>
-                      <li>• Dancing and celebration until midnight</li>
-                    </ul>
-                  </div>
-                </CardContent>
-              </Card>
             </div>
           </div>
         </main>
