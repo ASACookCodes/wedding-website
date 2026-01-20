@@ -1,6 +1,5 @@
 import { Clock, Camera, Music, Utensils } from "lucide-react";
 import BlueLavender from "./assets/Flower 12_Blue.png";
-import BlueFlowers from "./assets/Flower 03_Blue.png";
 import { Card, CardContent} from "./components/card";
 
 const Day = () => {
