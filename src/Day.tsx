@@ -1,6 +1,7 @@
 import { Clock, Camera, Music, Utensils } from "lucide-react";
 import BlueLavender from "./assets/Flower 12_Blue.png";
 import { Card, CardContent} from "./components/card";
+import Sidebar from "./components/sidebar";
 
 const Day = () => {
   const timeline = [
@@ -50,6 +51,7 @@ const Day = () => {
 
   return (
       <div className="min-h-screen flex w-full bg-wedding-bg fade-in-up">
+               <Sidebar />
         <main className="flex-1 p-6 lg:p-12">
           <div className="max-w-4xl mx-auto">
             <div className="relative mb-12">

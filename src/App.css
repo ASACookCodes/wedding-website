@@ -4,9 +4,9 @@
 @tailwind utilities;
 @layer base {
 :root {
-    --wedding-bg: #EDEBD7;
-    --wedding-text: #423E37;
-    --wedding-heading: #525856;
+    --wedding-bg: #fcfbf0;
+    --wedding-text: #4a5954;
+    --wedding-heading: #4a5954;
 }
 
 body {
@@ -33,14 +33,30 @@ body {
   src: url("/fonts/Centralwell.ttf") format("truetype");
 }
 
+@font-face {
+  font-family: charen;
+  font-style: normal;
+  font-display: swap;
+  src: url("/fonts/Charen.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: Cormorant-Light;
+  font-style: normal;
+  font-display: swap;
+  src: url("/fonts/Cormorant-Light.ttf") format("truetype");
+}
+
 @theme {
   --font-californian: 'Californian', serif;
   --font-centralwell: 'Centralwell', serif;
+  --font-charen: 'Charen', serif;
+  --font-cormorant-light: 'Cormorant-Light', serif;
 }
 
 @keyframes float {
   0%, 100% { transform: translateY(0px) rotate(0deg); }
-  50% { transform: translateY(-10px) rotate(5deg); }
+  50% { transform: translateY(-2px) rotate(2deg); }
 }
 
 @keyframes fadeInUp {
