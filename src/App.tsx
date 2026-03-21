@@ -1,77 +1,102 @@
 import { Calendar, MapPin } from "lucide-react";
-import PinkFlower from "./assets/Flower 08_Pink.png"
-import MixedWaterColourFlowers from "./assets/Flower 12_Blue.png"
-import PinkLilyFlowers from "./assets/Flower 13_Pink.png"
-import BlueWatercolourFlowers from "./assets/Flower 18_Pink & Blue.png"
-import FlowerLargeOrange from "./assets/Flower_02_Orange.png"
-import FlowerWhite from "./assets/Flower 05_White.png"
-import FlowerBlue from "./assets/Flower 03_Blue.png"
-import FlowerGreen from "./assets/Flower 15_Green.png"
-import Sidebar from "./components/sidebar";
-const App = () => {
-  return (
 
-    <div className="min-h-screen flex w-full bg-wedding-bg">
-      <Sidebar />
+import Flower01Pink from "./assets/Flower_01_Pink.png";
+import Flower02Orange from "./assets/Flower_02_Orange.png";
+import Flower03Blue from "./assets/Flower 03_Blue.png";
+import Flower04Yellow from "./assets/Flower 04_Yellow.png";
+import Flower05White from "./assets/Flower 05_White.png";
+import Flower06Blue from "./assets/Flower 06_Blue.png";
+import Flower07Orange from "./assets/Flower 07_Orange.png";
+import Flower08Pink from "./assets/Flower 08_Pink.png";
+import Flower09Yellow from "./assets/Flower 09_Yellow.png";
+import Flower10Yellow from "./assets/Flower 10_Yellow.png";
+import Flower11Blue from "./assets/Flower 11_Blue.png";
+import Flower12Blue from "./assets/Flower 12_Blue.png";
+import Flower13Pink from "./assets/Flower 13_Pink.png";
+import Flower14Blue from "./assets/Flower 14_Blue.png";
+import Flower15Green from "./assets/Flower 15_Green.png";
+import Flower16Red from "./assets/Flower 16_Red.png";
+import Flower17Pink from "./assets/Flower 17_Pink.png";
+import Flower18PinkBlue from "./assets/Flower 18_Pink & Blue.png";
+
+const flowerImages = [
+  Flower01Pink,
+  Flower02Orange,
+  Flower03Blue,
+  Flower04Yellow,
+  Flower05White,
+  Flower06Blue,
+  Flower07Orange,
+  Flower08Pink,
+  Flower09Yellow,
+  Flower10Yellow,
+  Flower11Blue,
+  Flower12Blue,
+  Flower13Pink,
+  Flower14Blue,
+  Flower15Green,
+  Flower16Red,
+  Flower17Pink,
+  Flower18PinkBlue,
+];
+
+// Shuffle the array for random order
+function shuffleArray<T>(array: T[]): T[] {
+  const arr = array.slice();
+  for (let i = arr.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [arr[i], arr[j]] = [arr[j], arr[i]];
+  }
+  return arr;
+}
+import MenuButton from "./components/MenuButton";
+
+const App = () => {
+  // Shuffle on each render for demo; for persistent order, use useMemo
+  // Fill the screen with enough flowers, repeating as needed
+  const screenFlowerCount = Math.ceil(window.innerWidth / 48); // ~48px per flower, adjust as needed
+  const flowersToShow = Array.from({ length: screenFlowerCount }, (_, i) => flowerImages[i % flowerImages.length]);
+  const shuffledFlowers = shuffleArray(flowersToShow);
+  return (
+    <div className="min-h-screen w-full bg-wedding-bg relative">
+      <MenuButton />
       <main className="flex-1 relative">
         {/* Hero Section */}
         <div className="relative min-h-screen flex items-center justify-center overflow-hidden">
-          {/* Decorative flower images */}
-          <div className="absolute bottom-20 w-122 h-122 opacity-50 float-animation" style={{ animationDelay: '1s', bottom: "-4vh", left: "-5vw" }}>
-            <img
-              src={FlowerLargeOrange}
-              alt="Orange flowers"
-              className="w-full h-full object-contain"
-            />
-          </div>
-          <div className="absolute bottom-20 w-122 h-122 opacity-50 float-animation" style={{ animationDelay: '1s', bottom: "-10vh", left: "0vw" }}>
-            <img
-              src={FlowerWhite}
-              alt="White flowers"
-              className="w-full h-full object-contain"
-            />
-          </div>
-          <div className="absolute" style={{ bottom: "-2vh", left: "15vw" }}>
-            <img
-              src={PinkFlower}
-              alt="Pink watercolor flowers"
-              className="w-68 h-68 opacity-60 float-animation object-contain"
-            />
-          </div>
-          <div className="absolute" style={{ bottom: "-20vh", left: "16vw" }}>
-            <img
-              src={FlowerBlue}
-              alt="Blue watercolor flowers"
-              className="w-108 h-108 opacity-60 float-animation object-contain"
-            />
-          </div>
-          <div className="absolute" style={{ bottom: "-20vh", left: "20vw" }}>
-            <img
-              src={FlowerGreen}
-              alt="Green watercolor flowers"
-              className="w-108 h-108 opacity-60 float-animation object-contain"
-            />
-          </div>
-          <div className="absolute right-16 w-80 h-80 opacity-50 float-animation" style={{ animationDelay: '2s', bottom: "-2vh" }}>
-            <img
-              src={MixedWaterColourFlowers}
-              alt="Mixed watercolor flowers"
-              className="w-full h-full object-contain"
-            />
-          </div>
-          <div className="absolute left-40 w-84 h-84 opacity-40 float-animation" style={{ animationDelay: '4s', bottom: "-2vh" }}>
-            <img
-              src={PinkLilyFlowers}
-              alt="Pink lily flowers"
-              className="w-full h-full object-contain"
-            />
-          </div>
-          <div className="absolute bottom-20 w-122 h-122 opacity-50 float-animation" style={{ animationDelay: '1s', bottom: "-2vh", right: "-8vw" }}>
-            <img
-              src={BlueWatercolourFlowers}
-              alt="Blue watercolor flowers"
-              className="w-full h-full object-contain"
-            />
+          {/* Decorative flower images - fill screen, bunch effect */}
+          <div
+            className="absolute bottom-0 left-0 w-full flex flex-row items-end z-0"
+            style={{ pointerEvents: 'none', gap: 0, justifyContent: 'space-between' }}
+          >
+            {shuffledFlowers.map((src, i) => {
+              // Randomly make some flowers larger for a bunch effect
+              const scale = 0.9 + Math.random() * 0.8; // 0.9x to 1.7x
+              // Overlap flowers by negative margin, but less so to fill width
+              const marginLeft = i === 0 ? 0 : -Math.floor(8 + Math.random() * 10);
+              // Randomize zIndex for depth
+              const zIndex = 10 + Math.floor(Math.random() * 10);
+              return (
+                <img
+                  key={i}
+                  src={src}
+                  alt={`Flower ${i+1}`}
+                  className="float-animation object-contain"
+                  style={{
+                    width: `${48 * scale}px`,
+                    minWidth: 0,
+                    maxWidth: `${90 * scale}px`,
+                    height: 'auto',
+                    opacity: 0.7 + 0.3 * Math.random(),
+                    animationDelay: `${Math.random() * 4}s`,
+                    marginLeft,
+                    zIndex,
+                  }}
+                  loading="lazy"
+                  width={Math.round(48 * scale)}
+                  height={Math.round(70 * scale)}
+                />
+              );
+            })}
           </div>
 
           {/* Main content */}
@@ -131,7 +156,6 @@ const App = () => {
         </div>
       </main>
     </div>
-
   );
 };
 
