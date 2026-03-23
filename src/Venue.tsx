@@ -1,4 +1,4 @@
-import { MapPin, Clock, Users } from "lucide-react";
+import { MapPin, Clock } from "lucide-react";
 import OrangeFlowers from "./assets/Flower_02_Orange.png";
 import { Card, CardContent, CardHeader, CardTitle } from "./components/card";
 import MenuButton from "./components/MenuButton";

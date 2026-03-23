@@ -1,5 +1,5 @@
 import MenuButton from "./components/MenuButton";
-import OrangeFlowers from "./assets/Flower_02_Orange.png";
+import OrangeFlowers from "./assets/webp/Flower 16_Red.webp";
 
 const Faq = () => {
  return (
@@ -8,15 +8,15 @@ const Faq = () => {
       <div className="min-h-screen flex w-full bg-wedding-bg fade-in-up">
         <main className="flex-1 p-6 lg:p-12">
           <div className="max-w-4xl mx-auto">
-            <div className="relative mb-12">
-              <div className="absolute -top-4 -right-4 w-35 h-35 opacity-40 float-animation">
+            <div className=" mb-12">
+              <div className="absolute -top-1 -right-1 w-35 h-35 opacity-40 float-animation sm:w-75 sm:h-75">
                 <img
                   src={OrangeFlowers}
                   alt="Orange flowers"
                   className="w-full h-full object-contain"
                 />
               </div>
-              <h1 className="text-7xl font-bold text-wedding-heading mb-4 font-cormorant-light">FAQ</h1>
+              <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-wedding-heading mb-4 font-cormorant-light break-words whitespace-normal mt-16 sm:mt-0">FAQ</h1>
               <p className="text-wedding-text mt-5 text-lg">Below are answers to some questions that you may have about the day. If you have a question that you can't find the answer to here, please get in contact.</p>
             </div>
 

@@ -1,23 +1,23 @@
 import { Calendar, MapPin } from "lucide-react";
 
-import Flower01Pink from "./assets/Flower_01_Pink.png";
-import Flower02Orange from "./assets/Flower_02_Orange.png";
-import Flower03Blue from "./assets/Flower 03_Blue.png";
-import Flower04Yellow from "./assets/Flower 04_Yellow.png";
-import Flower05White from "./assets/Flower 05_White.png";
-import Flower06Blue from "./assets/Flower 06_Blue.png";
-import Flower07Orange from "./assets/Flower 07_Orange.png";
-import Flower08Pink from "./assets/Flower 08_Pink.png";
-import Flower09Yellow from "./assets/Flower 09_Yellow.png";
-import Flower10Yellow from "./assets/Flower 10_Yellow.png";
-import Flower11Blue from "./assets/Flower 11_Blue.png";
-import Flower12Blue from "./assets/Flower 12_Blue.png";
-import Flower13Pink from "./assets/Flower 13_Pink.png";
-import Flower14Blue from "./assets/Flower 14_Blue.png";
-import Flower15Green from "./assets/Flower 15_Green.png";
-import Flower16Red from "./assets/Flower 16_Red.png";
-import Flower17Pink from "./assets/Flower 17_Pink.png";
-import Flower18PinkBlue from "./assets/Flower 18_Pink & Blue.png";
+import Flower01Pink from "./assets/webp/Flower_01_Pink.webp";
+import Flower02Orange from "./assets/webp/Flower_02_Orange.webp";
+import Flower03Blue from "./assets/webp/Flower 03_Blue.webp";
+import Flower04Yellow from "./assets/webp/Flower 04_Yellow.webp";
+import Flower05White from "./assets/webp/Flower 05_White.webp";
+import Flower06Blue from "./assets/webp/Flower 06_Blue.webp";
+import Flower07Orange from "./assets/webp/Flower 07_Orange.webp";
+import Flower08Pink from "./assets/webp/Flower 08_Pink.webp";
+import Flower09Yellow from "./assets/webp/Flower 09_Yellow.webp";
+import Flower10Yellow from "./assets/webp/Flower 10_Yellow.webp";
+import Flower11Blue from "./assets/webp/Flower 11_Blue.webp";
+import Flower12Blue from "./assets/webp/Flower 12_Blue.webp";
+import Flower13Pink from "./assets/webp/Flower 13_Pink.webp";
+import Flower14Blue from "./assets/webp/Flower 14_Blue.webp";
+import Flower15Green from "./assets/webp/Flower 15_Green.webp";
+import Flower16Red from "./assets/webp/Flower 16_Red.webp";
+import Flower17Pink from "./assets/webp/Flower 17_Pink.webp";
+import Flower18PinkBlue from "./assets/webp/Flower 18_Pink & Blue.webp";
 
 const flowerImages = [
   Flower01Pink,
@@ -65,7 +65,7 @@ const App = () => {
         <div className="relative min-h-screen flex items-center justify-center overflow-hidden">
           {/* Decorative flower images - fill screen, bunch effect */}
           <div
-            className="absolute bottom-0 left-0 w-full flex flex-row items-end z-0"
+            className="absolute -bottom-5 left-0 w-full flex flex-row items-end z-0 opacity-70"
             style={{ pointerEvents: 'none', gap: 0, justifyContent: 'space-between' }}
           >
             {shuffledFlowers.map((src, i) => {

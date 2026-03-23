@@ -39,7 +39,7 @@ const Sidebar: React.FC<SidebarProps> = ({ open, onClose }) => {
             SCHEDULE
           </Link>
            <Link
-            to="/acommdation"
+            to="/accommodation"
             className="flex items-center gap-3 text-lg font-charen hover:text-yellow-100 transition-colors"
           >
             ACCOMMODATION

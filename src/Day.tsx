@@ -1,5 +1,4 @@
-import { Clock, Camera, Music, Utensils } from "lucide-react";
-import BlueLavender from "./assets/Flower 12_Blue.png";
+import BlueLavender from "./assets/webp/Flower 12_Blue.webp";
 import { Card, CardContent } from "./components/card";
 import MenuButton from "./components/MenuButton";
 
@@ -49,15 +48,15 @@ const Day = () => {
       <div className="min-h-screen flex w-full bg-wedding-bg fade-in-up">
         <main className="flex-1 p-6 lg:p-12">
           <div className="max-w-4xl mx-auto">
-            <div className="relative mb-12">
-              <div className="absolute -top-4 -right-4 w-35 h-35 opacity-40 float-animation">
+            <div className=" mb-12">
+              <div className="absolute -top-1 -right-4 w-35 h-35 opacity-40 float-animation sm:w-75 sm:h-75">
                 <img
                   src={BlueLavender}
                   alt="Blue lavender"
                   className="w-full h-full object-contain"
                 />
               </div>
-              <h1 className="text-7xl text-wedding-heading mb-4 font-cormorant-light">The Day</h1>
+              <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-wedding-heading mb-4 font-cormorant-light break-words whitespace-normal mt-16 sm:mt-0">The Day</h1>
               <p className="text-wedding-text mt-5 text-lg">Below are the various timings and important information about what to expect on the day of the wedding.</p>
             </div>
 
