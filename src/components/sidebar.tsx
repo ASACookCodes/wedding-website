@@ -45,6 +45,12 @@ const Sidebar: React.FC<SidebarProps> = ({ open, onClose }) => {
             ACCOMMODATION
           </Link>
           <Link
+            to="/transport"
+            className="flex items-center gap-3 text-lg font-charen hover:text-yellow-100 transition-colors"
+          >
+            TRANSPORT
+          </Link>
+          <Link
             to="/faq"
             className="flex items-center gap-3 text-lg font-charen hover:text-yellow-100 transition-colors"
           >
